@@ -6,7 +6,7 @@ public class Test2 {
 
     @Test
     public void GetBookings(){
-        RestAssured.given().when().get("https://restful-booker.herokuapp.com/booking").then().statusCode(200).extract().response();
+        RestAssured.given().when().get("https://restful-booker.herokuapp.com/booking").then().statusCode(200).extract().response().prettyPrint();
     }
 
     @Test(dataProvider = "ipProvider", dataProviderClass = IpProvider.class)

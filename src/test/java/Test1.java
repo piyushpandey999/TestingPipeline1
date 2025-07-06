@@ -7,7 +7,7 @@ public class Test1 {
 
     @Test
     public void getContinents() {
-        RestAssured.given().when().get("https://dummy-json.mock.beeceptor.com/continents").then().statusCode(200).extract().response();
+        RestAssured.given().when().get("https://dummy-json.mock.beeceptor.com/continents").then().statusCode(200).extract().response().prettyPrint();
 
     }
     @Test(dataProvider = "ipProvider", dataProviderClass = IpProvider.class)
